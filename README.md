@@ -1,23 +1,23 @@
 
 # 🛒 B2B Sipariş API Dokümantasyonu
 
-Bu proje, bir B2B (İşletmeden İşletmeye) sipariş sisteminin API tarafını **Laravel** ve **Laravel Sanctum** kullanarak geliştirmek için oluşturulmuştur. Bu belge, projeyi hızla kurmanıza ve API uç noktalarını kullanmanıza yardımcı olacak şekilde hazırlanmıştır.
+Bu proje, bir B2B (İşletmeden İşletmeye) sipariş sisteminin API tarafını **Laravel** ve **Laravel Sanctum** kullanarak geliştirmek için oluşturulmuştur. Bu belge, projeyi hızla kurmanıza ve API End Point leri kullanmanıza yardımcı olacak şekilde hazırlanmıştır.
 
 ---
 
 ## 📊 Genel Bakış
 
-### 🔹 API Kategorilerine Göre Uç Nokta Sayısı
+### 🔹 API Kategorilerine Göre End Point Sayısı
 
-| Kategori             | Uç Nokta Sayısı |
+| Kategori             | End Point Sayısı |
 |----------------------|-----------------|
 | Kimlik Doğrulama     | 2               |
 | Ürünler              | 4               |
 | Siparişler           | 3               |
 
-### 🔹 Yetkilendirme Türlerine Göre Uç Nokta Dağılımı
+### 🔹 Yetkilendirme Türlerine Göre End Point Dağılımı
 
-| Yetki Türü | Uç Nokta Sayısı |
+| Yetki Türü | End Point Sayısı |
 |------------|-----------------|
 | Herkes     | 1               |
 | Admin      | 3               |
@@ -61,7 +61,7 @@ cp .env.example .env
 ### ✅ Uygulamaya Erişim
 
 - Laravel Giriş Sayfası: [http://localhost](http://localhost)
-- API Uç Noktaları: [http://localhost/api](http://localhost/api)
+- API End Pointları: [http://localhost/api](http://localhost/api)
 
 ---
 
@@ -77,15 +77,15 @@ cp .env.example .env
 
 ---
 
-## 🔌 API Uç Noktaları
+## 🔌 API End Points
 
-API isteklerinde `http://localhost` temel URL olarak kullanılır. Yetki gerektiren uç noktalar için `Bearer Token` kullanmalısınız.
+API isteklerinde `http://localhost` temel URL olarak kullanılır. Yetki gerektiren End Points için `Bearer Token` kullanmalısınız.
 
 ---
 
 ### 🔐 Kimlik Doğrulama
 
-| Metot | Uç Nokta      | Açıklama                |
+| Metot | End Point      | Açıklama                |
 |-------|---------------|--------------------------|
 | POST  | /api/register | Yeni kullanıcı kaydı     |
 | POST  | /api/login    | Giriş yap, token al      |
@@ -94,7 +94,7 @@ API isteklerinde `http://localhost` temel URL olarak kullanılır. Yetki gerekti
 
 ### 📦 Ürünler
 
-| Metot | Uç Nokta             | Açıklama           | Yetki   |
+| Metot | End Point             | Açıklama           | Yetki   |
 |-------|----------------------|---------------------|---------|
 | GET   | /api/products        | Ürünleri listele    | Herkes  |
 | POST  | /api/products        | Yeni ürün oluştur   | Admin   |
@@ -105,7 +105,7 @@ API isteklerinde `http://localhost` temel URL olarak kullanılır. Yetki gerekti
 
 ### 🛒 Siparişler
 
-| Metot | Uç Nokta             | Açıklama                                                  | Yetki     |
+| Metot | End Point             | Açıklama                                                  | Yetki     |
 |-------|----------------------|-------------------------------------------------------------|-----------|
 | GET   | /api/orders          | Siparişleri listele (Admin tümü, Müşteri kendi siparişleri)| Auth      |
 | GET   | /api/orders/{id}     | Belirli siparişi görüntüle                                | Auth      |
