@@ -112,9 +112,3 @@ API isteklerinde `http://localhost` temel URL olarak kullanılır. Yetki gerekti
 | POST  | /api/orders          | Yeni sipariş oluştur                                      | Customer  |
 
 ---
-
-## 📄 Lisans
-
-MIT Lisansı.
-
----
